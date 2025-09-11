@@ -1,0 +1,8 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.properties__main {
+	margin-bottom: units.rem(16);
+}

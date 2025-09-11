@@ -1,0 +1,18 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.intro-page__img {
+	margin: 0 auto;
+
+	@media ( max-width: units.rem(704) ) {
+		margin: 0;
+
+		max-width: units.rem(400);
+	}
+
+	@media ( max-width: units.rem(576) ) {
+		max-width: units.rem(220);
+	}
+}

@@ -1,0 +1,21 @@
+@use "../../../mixins/units";
+
+@media (max-width: units.rem(576)) {
+	.socials__link {
+		width: units.rem(34);
+		height: units.rem(34);
+	}
+
+	.header__container {
+		row-gap: units.rem(6);
+		column-gap: units.rem(20);
+	}
+
+	.header__contacts {
+		flex-direction: row;
+	}
+
+	.header__column {
+		gap: units.rem(20);
+	}
+}

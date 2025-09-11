@@ -1,0 +1,30 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.socials__link {
+	width: units.rem(24);
+	height: units.rem(24);
+
+	border-radius: 50%;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.socials__link--telegram {
+	background-color: var(--telegram);
+	background-image: url("./assets/svg/telegram.svg");
+}
+
+.socials__link--wats-app {
+	background-color: var(--whats-app);
+	background-image: url("./assets/svg/whats-app.svg");
+}
+
+.socials__link--vk {
+	background-color: var(--vk);
+	background-image: url("./assets/svg/vk.svg");
+}

@@ -1,0 +1,33 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.header__nav a {
+	font-weight: 500;
+	font-size: units.rem(18);
+	line-height: 135%;
+
+	transition: color 0.3s ease;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--header-link-hover);
+		}
+	}
+
+	&:focus-visible {
+		outline-width: units.rem(general.$outline-width);
+		outline-style: dashed;
+		outline-color: currentColor;
+		outline-offset: units.rem(general.$outline-offset);
+	}
+
+	&:active {
+		color: var(--header-link-active);
+	}
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		font-size: units.rem(20);
+	}
+}

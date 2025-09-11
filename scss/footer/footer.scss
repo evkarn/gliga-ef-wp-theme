@@ -1,0 +1,9 @@
+@use '../variables/general';
+@use '../variables/grid';
+@use '../mixins/units';
+@use '../mixins/adaptive-value';
+
+.footer {
+	padding-top: units.rem(grid.$gap);
+	padding-bottom: units.rem(grid.$gap);
+}

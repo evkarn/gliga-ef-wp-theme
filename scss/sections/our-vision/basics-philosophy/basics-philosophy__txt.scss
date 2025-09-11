@@ -1,0 +1,9 @@
+@use '../../../variables/general';
+@use '../../../variables/grid';
+@use '../../../mixins/units';
+@use '../../../mixins/adaptive-value';
+
+.basics-philosophy__txt {
+	font-weight: 600;
+	@include adaptive-value.adaptive-value-rem(font-size, 16, 20);
+}

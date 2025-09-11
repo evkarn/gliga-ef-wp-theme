@@ -1,0 +1,12 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.form__btn {
+	align-self: center;
+	justify-self: center;
+
+	max-width: units.rem(230);
+	width: 100%;
+}

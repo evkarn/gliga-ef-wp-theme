@@ -1,0 +1,25 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.partners {
+	::-webkit-scrollbar {
+		height: units.rem(20);
+		background-color: var(--steam);
+
+		border-radius: units.rem(1000);
+	}
+
+	/* Дорожка (фон) */
+	::-webkit-scrollbar-track {
+		background: var(--scrollbar-bg);
+		border-radius: units.rem(10);
+	}
+
+	/* Ползунок */
+	::-webkit-scrollbar-thumb {
+		background: var(--scrollbar-thumb-bg);
+		border-radius: units.rem(10);
+	}
+}

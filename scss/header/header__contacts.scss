@@ -1,0 +1,26 @@
+@use '../variables/general';
+@use '../variables/grid';
+@use '../mixins/units';
+@use '../mixins/adaptive-value';
+
+.header__contacts {
+	position: relative;
+	z-index: 4;
+
+	justify-content: center;
+	align-items: center;
+	gap: units.rem(4);
+
+	height: 100%;
+
+	@media ( min-width: units.rem(576.96) ) {
+		padding: units.rem(8) units.rem(16);
+		border-radius: units.rem(2);
+		background-color: var(--brand-color);
+	}
+
+	.contacts__link {
+		font-size: 1rem;
+		line-height: 1;
+	}
+}

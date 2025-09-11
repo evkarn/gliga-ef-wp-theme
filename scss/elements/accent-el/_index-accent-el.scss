@@ -1,0 +1,25 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.accent-el {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	max-width: 100%;
+
+	padding: units.rem(25);
+
+	background-color: var(--accent-el-bg);
+	color: var(--accent-el-color);
+
+	border-radius: units.rem(general.$border-radius);
+
+	font-family: var(--font-one);
+	font-weight: 600;
+	font-size: units.rem(20);
+	line-height: 120%;
+	text-align: center;
+}

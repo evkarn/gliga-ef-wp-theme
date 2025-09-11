@@ -1,0 +1,38 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.intro .intro-slider__pagination {
+	--swiper-pagination-color: var(--accent);
+	--swiper-pagination-bullet-horizontal-gap: 0;
+	--swiper-pagination-bullet-width: 1.75rem;
+	--swiper-pagination-bullet-height: 1.75rem;
+	--swiper-pagination-bullet-border-radius: 0.625rem;
+	--swiper-pagination-bullet-inactive-color: var(--light);
+	--swiper-pagination-bullet-inactive-opacity: 1;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	width: auto;
+	gap: units.rem(15);
+
+	left: auto;
+	right: calc((100% - #{units.rem(grid.$container-width)}) / 2);
+
+	@include adaptive-value.adaptive-value-rem(padding-bottom, 75, 50);
+
+	@media ( max-width: units.rem(1486) ) {
+		width: 100%;
+		justify-content: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: units.rem(10);
+		right: 0;
+		bottom: 0;
+		top: auto;
+		padding: 0 units.rem(grid.$container-offset);
+		padding-bottom: units.rem(16);
+	}
+}

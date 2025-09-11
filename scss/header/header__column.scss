@@ -1,0 +1,16 @@
+@use '../variables/general';
+@use '../variables/grid';
+@use '../mixins/units';
+@use '../mixins/adaptive-value';
+
+.header__column {
+	@include adaptive-value.adaptive-value-rem(gap, 32, 50);
+
+	@media ( max-width: units.rem(1200) ) {
+		column-gap: units.rem(16);
+	}
+}
+
+.header__column--left {
+	flex-shrink: 0;
+}

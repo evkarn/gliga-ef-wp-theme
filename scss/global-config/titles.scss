@@ -1,0 +1,55 @@
+@use "../variables/general";
+@use "../variables/grid";
+@use "../mixins/units";
+@use "../mixins/adaptive-value";
+
+.h1,
+.h2,
+.h3,
+.h4 {
+	line-height: 1.2;
+
+	color: inherit;
+}
+
+.h1 {
+	font-family: var(--font-one);
+
+	font-weight: 700;
+	@include adaptive-value.adaptive-value-rem(font-size, 26, 42);
+}
+
+.h2,
+.h3 {
+	font-family: var(--font-two);
+}
+
+.h2 {
+	font-weight: 600;
+	@include adaptive-value.adaptive-value-rem(font-size, 22, 38);
+}
+
+.h3 {
+	font-weight: 600;
+	@include adaptive-value.adaptive-value-rem(font-size, 18, 24);
+}
+
+.title-decor {
+	display: flex;
+	flex-direction: column;
+	row-gap: units.rem(10);
+	align-items: center;
+
+	text-align: center;
+
+	&:after {
+		content: "";
+
+		display: inline-block;
+
+		width: units.rem(100);
+		height: units.rem(4);
+
+		background-color: var(--accent);
+	}
+}

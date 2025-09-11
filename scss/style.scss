@@ -1,0 +1,93 @@
+/*!
+Theme Name: Main
+Author: FireSeo
+Author URI: https://fireseo.ru/
+Description: The Wordpress theme of GliGA Forging Equipment
+*/
+
+// Fonts
+@use './fonts/fonts-faces';
+// END. Fonts
+
+
+// Root
+@use './variables/root';
+// End. Root
+
+
+// Reset styles
+@use './reset-styles/index-reset';
+// End. Reset styles
+
+
+// Global
+@use './global-config/config';
+// END. Global
+
+
+// Plugins
+@use '../node_modules/swiper/swiper';
+@use '../node_modules/swiper/modules/a11y';
+@use '../node_modules/swiper/modules/free-mode';
+@use '../node_modules/swiper/modules/navigation';
+@use '../node_modules/swiper/modules/pagination';
+@use '../node_modules/simplebar/dist/simplebar.css';
+// End. Plugins
+
+
+// Elements
+@use "./elements/accent-el/index-accent-el";
+@use "./elements/article/index-article";
+@use "./elements/badge/index-badge";
+@use "./elements/burger/index-burger";
+@use "./elements/buttons/index-buttons";
+@use "./elements/card/index-card";
+@use "./elements/card-list/index-card-list";
+@use "./elements/contacts/index-contacts";
+@use "./elements/form/index-form";
+@use "./elements/go-back-top/index-go-back-top";
+@use "./elements/info-numbers/index-info-numbers";
+@use "./elements/link-catalog/index-link-catalog";
+@use "./elements/menu/index-menu";
+@use "./elements/models-table/index-models-table";
+@use "./elements/read-progress-line/index-read-progress-line";
+@use "./elements/ru-tube/index-ru-tube";
+@use "./elements/simplebar/index-simplebar";
+@use "./elements/socials/index-socials";
+// End. Elements
+
+
+// Header
+@use './header/index-header';
+// End. Header
+
+
+// Sections
+@use './sections/about-sec/index-about-sec';
+@use './sections/awards/index-awards';
+@use "./sections/breadcrumbs/index-breadcrumbs";
+@use './sections/case-details/index-case-details';
+@use './sections/catalog-category/index-catalog-category';
+@use './sections/contacts-sec/index-contacts-sec';
+@use './sections/error-404/index-error-404';
+@use './sections/descr-series/index-descr-series';
+@use './sections/get-offer/index-get-offer';
+@use './sections/history/index-history';
+@use './sections/intro/index-intro';
+@use './sections/intro-img/index-intro-img';
+@use './sections/intro-page/index-intro-page';
+@use './sections/our-vision/index-our-vision';
+@use './sections/partners/index-partners';
+@use './sections/policy/index-policy';
+@use './sections/properties/index-properties';
+// End. Sections
+
+
+// Footer
+@use './footer/index-footer';
+// End. Footer
+
+
+// Media
+@use './@media/index-media';
+// End. Media

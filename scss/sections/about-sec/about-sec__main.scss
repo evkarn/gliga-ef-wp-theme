@@ -1,0 +1,12 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.about-sec__main {
+	@include adaptive-value.adaptive-value-rem(row-gap, 32, 40);
+}
+
+.main--home .about-sec__main {
+	align-items: flex-start;
+}

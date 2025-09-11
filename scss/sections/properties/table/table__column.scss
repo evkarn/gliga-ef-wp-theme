@@ -1,0 +1,14 @@
+@use "../../../variables/general";
+@use "../../../variables/grid";
+@use "../../../mixins/units";
+@use "../../../mixins/adaptive-value";
+
+.table__column--first,
+.table__column--units {
+	flex-shrink: 0;
+}
+
+.table__column--first {
+	max-width: var(--first-column-width);
+	width: 100%;
+}

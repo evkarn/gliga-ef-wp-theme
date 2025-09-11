@@ -1,0 +1,14 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.get-offer {
+	padding-top: units.rem(48);
+	padding-bottom: units.rem(48);
+
+	@media (max-width: units.rem(768)) {
+		padding-top: units.rem(32);
+		padding-bottom: units.rem(32);
+	}
+}

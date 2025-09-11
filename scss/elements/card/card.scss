@@ -1,0 +1,83 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.card {
+	height: 100%;
+	font-family: var(--font-one);
+
+	border-radius: units.rem(general.$border-radius);
+	text-align: center;
+
+	line-height: 1.2;
+
+	cursor: pointer;
+
+	&:focus-visible {
+		outline-width: units.rem(general.$outline-width);
+		outline-style: dashed;
+		outline-color: var(--accent);
+		outline-offset: units.rem(general.$outline-offset);
+	}
+}
+
+.card.card--news {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.card.card--product {
+	background-color: #f0f0f0;
+}
+
+.card.card--info {
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
+
+	background-color: #f3f3f3;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--silver-setting);
+
+			.card__img-wrap {
+				border-color: var(--accent);
+			}
+
+			.card__main {
+				background-color: var(--silver-setting);
+			}
+
+			.card__img {
+				scale: var(--scale);
+			}
+
+			.card__title {
+				color: var(--accent);
+			}
+		}
+	}
+
+	&:focus-visible {
+		background-color: var(--silver-setting);
+
+		.card__img-wrap {
+			border-color: var(--accent);
+		}
+
+		.card__main {
+			background-color: var(--silver-setting);
+		}
+
+		.card__img {
+			scale: var(--scale);
+		}
+
+		.card__title {
+			color: var(--accent);
+		}
+	}
+}

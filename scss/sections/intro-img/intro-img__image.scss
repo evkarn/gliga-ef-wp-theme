@@ -1,0 +1,11 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.intro-img__image {
+	width: 100%;
+	height: auto;
+
+	border-radius: units.rem(general.$border-radius);
+}

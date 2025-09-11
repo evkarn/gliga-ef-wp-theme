@@ -1,0 +1,33 @@
+@use "../mixins/units";
+@use "../variables/grid";
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+
+	width: 100%;
+
+	background-color: var(--body-bg);
+
+	box-shadow: 0 0 units.rem(8) var(--brand-color);
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		&:after {
+			content: "";
+
+			position: absolute;
+			z-index: 3;
+
+			top: 0;
+			left: 0;
+
+			width: 100%;
+			height: 100%;
+
+			background-color: var(--body-bg);
+			box-shadow: 0 0 units.rem(8) rgb(0 0 0 / 25%);
+		}
+	}
+}

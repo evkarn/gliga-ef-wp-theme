@@ -1,0 +1,11 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.card-list__title {
+	font-weight: 600;
+	font-size: 20px;
+	@include adaptive-value.adaptive-value-rem(font-size, 16, 20);
+	line-height: 120%;
+}

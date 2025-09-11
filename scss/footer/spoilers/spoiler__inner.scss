@@ -1,0 +1,8 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.footer .spoilers__list.init .spoiler__inner {
+	padding-top: units.rem(16);
+}

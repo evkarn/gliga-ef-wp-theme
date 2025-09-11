@@ -1,0 +1,17 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.intro-page__badge {
+	padding: units.rem(4) units.rem(10);
+
+	font-weight: 600;
+	font-size: units.rem(16);
+	line-height: 120%;
+	text-align: center;
+
+	background-color: var(--billiard-table);
+	color: var(--text-light);
+	border-radius: units.rem(general.$border-radius);
+}

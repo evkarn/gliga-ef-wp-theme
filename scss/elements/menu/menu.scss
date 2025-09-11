@@ -1,0 +1,42 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.header__nav .menu {
+	display: inline-flex;
+	align-items: center;
+	@include adaptive-value.adaptive-value-rem(column-gap, 20, 50);
+	row-gap: units.rem(6);
+
+	height: 100%;
+
+	@media (max-width: units.rem(1312)) {
+		column-gap: units.rem(16);
+	}
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		flex-direction: column;
+		align-items: flex-end;
+		row-gap: units.rem(10);
+	}
+}
+
+.footer__nav .menu {
+	display: flex;
+	flex-direction: column;
+	row-gap: units.rem(15);
+	
+	@include adaptive-value.adaptive-value-rem(font-size, 16, 20);
+
+	@media (max-width: units.rem(768)) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: units.rem(10);
+	}
+
+	@media ( max-width: units.rem(576) ) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

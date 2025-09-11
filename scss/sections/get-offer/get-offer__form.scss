@@ -1,0 +1,9 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.get-offer__form {
+	@include adaptive-value.adaptive-value-rem(row-gap, 20, 40);
+	margin-bottom: units.rem(20);
+}

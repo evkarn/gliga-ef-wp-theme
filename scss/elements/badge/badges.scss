@@ -1,0 +1,16 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.badges {
+	position: absolute;
+	top: units.rem(15);
+	right: units.rem(15);
+	z-index: 1;
+
+	display: grid;
+	grid-template-columns: 1fr;
+
+	row-gap: units.rem(5);
+}

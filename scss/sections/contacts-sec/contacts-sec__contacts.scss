@@ -1,0 +1,27 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.contacts-sec__contacts {
+	grid-column: span 4;
+
+	row-gap: units.rem(20);
+
+	border: units.rem(1) solid var(--coronation);
+	border-radius: units.rem(general.$border-radius);
+	padding: units.rem(22);
+
+	box-shadow: units.rem(1) units.rem(1) units.rem(1) units.rem(-2) rgba(0 0 0 / 25%);
+
+	@media ( max-width: units.rem(896) ) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: units.rem(20);
+	}
+
+	@media ( max-width: units.em(576) ) {
+		display: flex;
+		flex-direction: column;
+	}
+}

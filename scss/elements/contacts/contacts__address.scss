@@ -1,0 +1,12 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.contacts__address {
+	padding-left: units.rem(32);
+
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: units.rem(20);
+}

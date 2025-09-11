@@ -1,0 +1,15 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.contacts-sec__map {
+	grid-column: span 8;
+
+	position: relative;
+
+	border: units.rem(1) solid var(--text-dark);
+	border-radius: units.rem(general.$border-radius);
+
+	overflow: hidden;
+}

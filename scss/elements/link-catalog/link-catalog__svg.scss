@@ -1,0 +1,9 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.link-catalog__svg {
+	width: units.rem(20);
+	height: units.rem(20);
+}

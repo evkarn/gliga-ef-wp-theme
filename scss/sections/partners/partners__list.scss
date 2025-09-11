@@ -1,0 +1,14 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.partners__list {
+	display: grid;
+	grid-template-columns: repeat(15, 1fr);
+	@include adaptive-value.adaptive-value-rem(gap, 20, 32);
+
+	@media (max-width: units.rem(1024)) {
+		min-width: units.rem(1100);
+	}
+}

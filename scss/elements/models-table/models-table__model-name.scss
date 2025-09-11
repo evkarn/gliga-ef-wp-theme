@@ -1,0 +1,12 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.models-table__model-name {
+	font-weight: 400;
+	text-align: center;
+
+	font-size: units.rem(18);
+	line-height: 120%;
+}

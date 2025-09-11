@@ -1,0 +1,16 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.card__pressure {
+	margin-top: auto;
+	
+	font-family: var(--font-two);
+
+	font-weight: 500;
+	font-size: units.rem(14);
+	line-height: 1.2;
+
+	color: var(--shark-fin);
+}

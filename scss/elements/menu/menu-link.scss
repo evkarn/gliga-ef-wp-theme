@@ -1,0 +1,195 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.header .menu-link {
+	transition: color .3s ease;
+}
+
+.current-menu-item > .menu-link {
+	@media ( max-width: units.rem(grid.$max-switch-point) ) {
+		color: var(--header-link-hover);
+	}
+}
+
+.header .menu > .menu-item > .menu-link {
+	text-transform: uppercase;
+}
+
+.header__nav .menu .menu-item > .menu-link {
+	@media (min-width: units.rem(grid.$min-switch-point)) {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+}
+
+.sub-menu[data-grid] .menu-item .menu-link {
+	padding: units.rem(20);
+
+	text-align: center;
+
+	transition: background-color 0.3s ease;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--light);
+		}
+	}
+
+	> * {
+		row-gap: units.rem(6);
+
+		transition: color .3s ease;
+	}
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		padding: 0;
+
+		background-color: transparent;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
+
+.header__nav .menu > .menu-item-object-page > .menu-link {
+	font-weight: 500;
+	font-size: units.rem(18);
+	line-height: 135%;
+
+	transition: color 0.3s ease;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--accent);
+		}
+	}
+
+	&:focus-visible {
+		outline-width: units.rem(general.$outline-width);
+		outline-style: dashed;
+		outline-color: currentColor;
+		outline-offset: units.rem(general.$outline-offset);
+	}
+
+	&:active {
+		color: var(--accent-dark);
+	}
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		font-size: units.rem(20);
+	}
+}
+
+.sub-menu[data-grid] .menu-item.current-menu-item .menu-link {
+	background-color: var(--light);
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		background-color: transparent;
+
+		color: var(--accent);
+	}
+}
+
+.header .menu .sub-menu:not([data-grid]) .menu-link {
+	font-weight: 500;
+	line-height: 133%;
+
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease,
+		border-color 0.3s ease;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--light);
+		}
+	}
+
+	@media (min-width: units.rem(grid.$min-switch-point)) {
+		padding: units.rem(16) units.rem(24);
+	}
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		font-weight: 500;
+		font-size: units.rem(18);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent !important;
+			}
+		}
+	}
+}
+
+.header .menu .sub-menu .menu-item .menu-link {
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--header-link-hover);
+		}
+	}
+
+	&:focus-visible {
+		outline-width: units.rem(general.$outline-width);
+		outline-style: dashed;
+		outline-color: var(--accent);
+		outline-offset: units.rem(general.$outline-offset);
+	}
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		background-color: transparent;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		font-size: units.rem(18);
+	}
+
+	@media (max-width: units.rem(448)) {
+		font-size: units.rem(16);
+	}
+
+	@media (max-width: units.rem(352)) {
+		font-size: units.rem(14);
+	}
+}
+
+.header .menu .sub-menu .menu-item.current-menu-item .menu-link {
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		background-color: transparent;
+
+		color: var(--accent);
+	}
+}
+
+.header .menu .sub-menu:not([data-grid]) .menu-item:last-child .menu-link {
+	@media (min-width: units.rem(grid.$min-switch-point)) {
+		border-bottom-left-radius: units.rem(10);
+		border-bottom-right-radius: units.rem(10);
+	}
+}
+
+.header .menu .sub-menu:not([data-grid]) .menu-item.current-menu-item .menu-link {
+	background-color: var(--light);
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		background-color: transparent;
+
+		&:hover {
+			background-color: transparent;
+		}
+
+		color: var(--accent);
+	}
+}
+
+.footer__nav .sub-menu a {
+	font-size: units.rem(14);
+	font-weight: 400;
+}

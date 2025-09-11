@@ -1,0 +1,15 @@
+@use '../../../variables/general';
+@use '../../../variables/grid';
+@use '../../../mixins/units';
+@use '../../../mixins/adaptive-value';
+
+.basics-philosophy {
+	@include adaptive-value.adaptive-value-rem(gap, 20, grid.$gap);
+	
+		@include adaptive-value.adaptive-value-rem(margin-bottom, 32, 50);
+
+	@media ( max-width: units.rem(768) ) {
+		display: flex;
+		flex-direction: column;
+	}
+}

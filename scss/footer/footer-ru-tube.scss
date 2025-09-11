@@ -1,0 +1,13 @@
+@use "../variables/general";
+@use "../variables/grid";
+@use "../mixins/units";
+@use "../mixins/adaptive-value";
+
+
+.footer .ru-tube {
+	@media (max-width: units.rem(576)) {
+		flex-direction: row;
+		align-items: center;
+		max-width: unset;
+	}
+}

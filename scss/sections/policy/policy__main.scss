@@ -1,0 +1,49 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.policy__main {
+	row-gap: units.rem(20);
+
+	.wp-block-heading {
+		font-weight: 600;
+		@include adaptive-value.adaptive-value-rem(font-size, 22, 38);
+	}
+
+	p {
+		font-weight: 400;
+		@include adaptive-value.adaptive-value-rem(font-size, 16, 20);
+	}
+
+	ul,
+	ol {
+		display: flex;
+		flex-direction: column;
+		row-gap: units.rem(10);
+
+		padding-left: units.rem(30);
+
+		list-style-type: disc;
+
+		font-weight: 400;
+		@include adaptive-value.adaptive-value-rem(font-size, 16, 20);
+	}
+
+	a {
+		transition: color .3s ease;
+
+		@media ( any-hover: hover ) {
+			&:hover {
+				color: var(--accent);
+			}
+		}
+
+		&:focus-visible {
+			outline-width: units.rem(general.$outline-width);
+			outline-style: dashed;
+			outline-color: currentColor;
+			outline-offset: units.rem(general.$outline-offset);
+		}
+	}
+}

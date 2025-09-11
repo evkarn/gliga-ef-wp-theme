@@ -1,0 +1,15 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.models-table {
+	font-weight: 600;
+	font-size: units.rem(18);
+	line-height: 120%;
+	text-align: center;
+
+	border-radius: units.rem(general.$border-radius);
+
+	overflow-x: auto;
+}

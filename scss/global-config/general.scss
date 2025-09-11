@@ -1,0 +1,68 @@
+@use "../variables/general";
+@use "../variables/grid";
+@use "../mixins/units";
+@use "../mixins/adaptive-value";
+
+.page-wrap {
+	// flex
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
+	// display: grid
+	// grid-template-rows: auto 1fr auto
+	// min-height: 100%
+}
+
+.main {
+	// if flex
+	flex-shrink: 1;
+	flex-grow: 1;
+	flex-basis: auto;
+}
+
+.section {
+	position: relative;
+
+	margin: 0 auto;
+
+	padding-top: units.rem(32);
+	padding-bottom: units.rem(32);
+
+	min-width: 0;
+}
+
+.section__header {
+	margin-bottom: units.rem(grid.$gap);
+}
+
+.section__header:has(.section__descr),
+.section__header:has(.merits-list) {
+	display: flex;
+	flex-direction: column;
+	row-gap: units.rem(24);
+	row-gap: units.rem(grid.$gap);
+}
+
+.section__descr {
+	max-width: units.rem(1000);
+	margin: 0 auto;
+	text-align: center;
+
+	font-size: units.rem(16);
+	line-height: 133%;
+
+	color: var(--black-space);
+}
+
+.display-desktop {
+	@media (max-width: units.rem(576)) {
+		display: none;
+	}
+}
+
+.display-mobile {
+	@media (min-width: units.rem(576.96)) {
+		display: none;
+	}
+}

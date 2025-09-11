@@ -1,0 +1,7 @@
+@use "../../../mixins/units";
+
+@media (max-width: units.rem(368)) {
+	.header .socials {
+		display: none;
+	}
+}

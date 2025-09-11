@@ -1,0 +1,99 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.models-table__td {
+	border-right: units.rem(1) solid var(--text-dark);
+	border-bottom: units.rem(1) solid var(--text-dark);
+
+	padding: units.rem(20) units.rem(15);
+
+	pointer-events: none;
+
+	&:has(img) {
+		pointer-events: auto;
+	}
+
+	&:first-child {
+		border-top: units.rem(1) solid var(--text-dark);
+	}
+}
+
+.models-table--bg-fill .models-table__td {
+	padding: units.rem(30) units.rem(15) units.rem(20) units.rem(15);
+
+	&:first-child {
+		background-color: var(--secondary);
+		color: var(--text-light);
+		border-right-color: var(--text-light);
+	}
+}
+
+.models-table__column:first-child .models-table__td {
+	border-left: units.rem(1) solid var(--text-dark);
+
+	&:first-child {
+		border-top-left-radius: units.rem(general.$border-radius);
+	}
+
+	&:last-child {
+		border-bottom-left-radius: units.rem(general.$border-radius);
+	}
+}
+
+.models-table--bg-fill .models-table__column:first-child .models-table__td {
+	&:first-child {
+		border-bottom-color: var(--text-light);
+	}
+}
+
+.models-table__column:last-child {
+	.models-table__td {
+		&:first-child {
+			border-top-right-radius: units.rem(general.$border-radius);
+		}
+
+		&:last-child {
+			border-bottom-right-radius: units.rem(general.$border-radius);
+		}
+	}
+}
+
+.models-table--bg-fill .models-table__column:last-child {
+	.models-table__td {
+		&:first-child {
+			border-right-color: var(--text-dark);
+		}
+	}
+}
+
+a.models-table__td {
+	position: relative;
+
+	@media (any-hover: hover) {
+		&:hover {
+			.badge--stroke {
+				background-color: var(--secondary);
+				color: var(--text-light);
+				border-color: transparent;
+			}
+
+			.models-table__img {
+				scale: 1.1;
+			}
+		}
+	}
+
+	&:focus-visible {
+		.badge--stroke {
+			background-color: var(--secondary);
+			color: var(--text-light);
+			border-color: transparent;
+		}
+
+		.models-table__img {
+			scale: 1.1;
+		}
+	}
+}

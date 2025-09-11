@@ -1,0 +1,9 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.ru-tube__header {
+	width: units.rem(140);
+	height: units.rem(140);
+}

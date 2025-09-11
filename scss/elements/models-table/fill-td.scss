@@ -1,0 +1,18 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.fill-td {
+	width: 100%;
+	flex-grow: 1;
+
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	transform: rotate(180deg);
+
+	&:not(:last-child) {
+		border-top: units.rem(1) solid var(--text-dark);
+		border-bottom: none;
+	}
+}

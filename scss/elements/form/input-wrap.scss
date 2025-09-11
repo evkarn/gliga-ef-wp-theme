@@ -1,0 +1,51 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.input-wrap {
+	position: relative;
+
+	padding: 0;
+
+	border: none;
+
+	&:after {
+		content: "";
+
+		position: absolute;
+		left: 0;
+		top: units.rem(14);
+
+		width: units.rem(30);
+		height: units.rem(30);
+
+		background-position: left center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+.input-wrap:has(.input--name) {
+	&:after {
+		background-image: url("./assets/svg/form-user.svg");
+	}
+}
+
+.input-wrap:has(.input--city) {
+	&:after {
+		background-image: url("./assets/svg/form-city.svg");
+	}
+}
+
+.input-wrap:has(.input--tel) {
+	&:after {
+		background-image: url("./assets/svg/form-phone.svg");
+	}
+}
+
+.input-wrap:has(.input--email) {
+	&:after {
+		background-image: url("./assets/svg/form-mail.svg");
+	}
+}

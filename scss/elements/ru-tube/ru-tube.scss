@@ -1,0 +1,35 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.ru-tube {
+	gap: units.rem(10);
+	max-width: units.rem(140);
+	text-align: center;
+
+	font-size: units.rem(12);
+	line-height: 132%;
+	color: var(--text-dark);
+
+	border-radius: units.rem(general.$border-radius);
+
+	@media (any-hover: hover) {
+		&:hover {
+			.ru-tube__svg {
+				fill: var(--accent);
+			}
+		}
+	}
+
+	&:focus-visible {
+		outline-width: units.rem(general.$outline-width);
+		outline-style: dashed;
+		outline-color: var(--accent);
+		outline-offset: units.rem(general.$outline-offset);
+
+		.ru-tube__svg {
+			fill: var(--accent);
+		}
+	}
+}

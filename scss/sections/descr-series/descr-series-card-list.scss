@@ -1,0 +1,17 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.descr-series__merits .card-list {
+	padding: 0;
+	background-color: transparent;
+
+	@media (max-width: units.rem(768)) {
+		padding: units.rem(20);
+
+		border-radius: units.rem(general.$border-radius);
+
+		background-color: var(--cascading-white);
+	}
+}

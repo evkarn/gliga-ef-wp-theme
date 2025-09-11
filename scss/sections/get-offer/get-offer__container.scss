@@ -1,0 +1,9 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.get-offer__container {
+	@include adaptive-value.adaptive-value-rem(padding, 32, 50);
+	background-color: #fff;
+}

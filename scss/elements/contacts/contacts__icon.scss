@@ -1,0 +1,20 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.contacts__icon {
+	width: units.rem(20);
+	height: units.rem(20);
+}
+
+.header .contacts__icon {
+	@media (min-width: units.rem(576.96)) {
+		display: none;
+	}
+
+	@media (max-width: units.rem(576)) {
+		width: units.rem(14);
+		height: units.rem(14);
+	}
+}

@@ -1,0 +1,11 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.awards .info-numbers {
+	@media ( max-width: units.rem(480) ) {
+		display: flex;
+		flex-direction: column;
+	}
+}

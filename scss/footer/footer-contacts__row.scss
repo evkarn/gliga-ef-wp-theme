@@ -1,0 +1,12 @@
+@use "../variables/general";
+@use "../variables/grid";
+@use "../mixins/units";
+@use "../mixins/adaptive-value";
+
+.footer .contacts__row {
+	gap: units.rem(12);
+
+	@media (max-width: units.rem(576)) {
+		flex-wrap: wrap;
+	}
+}

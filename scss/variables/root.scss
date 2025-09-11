@@ -1,0 +1,77 @@
+:root {
+	--fz: 16;
+	--fz-px: 16px;
+
+	--index: calc(1vh + 1vw);
+
+	--font-one: "Roboto", sans-serif;
+	--font-two: "RobotoCondensed", sans-serif;
+
+	--body-bg: #ffffff;
+
+	--brand-color: #f0f0f0;
+
+	--header-link-hover: #c01a2c;
+	--header-link-active: #e4444a;
+
+	--accent: #c01a2c;
+	--accent-light: #e4444a;
+	--accent-dark: #9d000c;
+
+	--secondary: #15467a;
+
+	--title-light: #ffffff;
+	--title-dark: oklch(0.25 0 0);
+
+	--text-light: #ffffff;
+	--text-dark: oklch(0.25 0 0);
+
+	--light: #ffffff;
+	--dark: oklch(0 0 0);
+
+	--telegram: #2f89ce;
+	--whats-app: #47c95f;
+
+	--badge-bg: #c7d9ef;
+
+	--black-space: #535353;
+	--trolley-grey: #838383;
+
+	--snowflake: #f2f2f2;
+	--amethyst-haze: #a0a1a9;
+	--silver-setting: #d9dbdb;
+	--the-end: #2b2b2b;
+	--cascading-white: #f0f0f0;
+	--mourn-mountain-snow: #ebebec;
+	--smoke-screen: #aeaeae;
+	--steam: #dedede;
+
+	--bleached-silk: #f2f2f2;
+	--coronation: #ebebeb;
+
+	--silver-ash: #dddbd0;
+	--billiard-table: #115840;
+
+	--accent-el-bg: #c01a2c;
+	--accent-el-color: #fff;
+
+	--get-offer-bg: #f0f0f0;
+
+	--card-bg: #dddbd0;
+	--card-header-bg: linear-gradient(180deg, rgba(205, 221, 241, 0) 0%, #cdddf1 100%);
+	--card-title-color: #c01a2c;
+
+	--product-card: linear-gradient(90deg, #f0dde1 0%, #cfdbee 47%, #dcdce5 100%);
+
+	--footer-bg: #dddbd0;
+	--footer-bottom-line: #959595;
+	--footer-bottom-color: #959595;
+
+	--intro-page-model-color: #c01a2c;
+
+	--card-list-item-before-bg: #c01a2c;
+
+	--badge-fill-color: #ffffff;
+
+	--btn-fill-color: #ffffff;
+}

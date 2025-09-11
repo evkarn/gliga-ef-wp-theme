@@ -1,0 +1,9 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.info-numbers {
+	font-family: var(--font-one);
+	@include adaptive-value.adaptive-value-rem(gap, 15, 32);
+}

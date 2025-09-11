@@ -1,0 +1,11 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.simplebar-track.simplebar-horizontal {
+	height: units.rem(20);
+	background-color: var(--steam);
+
+	border-radius: units.rem(1000);
+}

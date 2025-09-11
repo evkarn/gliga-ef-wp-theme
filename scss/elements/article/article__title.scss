@@ -1,0 +1,13 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.article__title {
+	font-family: var(--font-one);
+	font-weight: 400;
+	@include adaptive-value.adaptive-value-rem(font-size, 18, 20);
+	text-align: center;
+
+	transition: color .3s ease;
+}

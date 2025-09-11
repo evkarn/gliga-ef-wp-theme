@@ -1,0 +1,43 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.card__footer {
+	padding-right: units.rem(15);
+	padding-left: units.rem(15);
+	padding-bottom: units.rem(15);
+
+	border-bottom-left-radius: units.rem(general.$border-radius);
+	border-bottom-right-radius: units.rem(general.$border-radius);
+}
+
+.card--product .card__footer {
+	background-color: #f0f0f0;
+}
+
+.card--info .card__footer {
+	background-color: #f3f3f3;
+}
+
+.card--news .card__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	column-gap: units.rem(20);
+	row-gap: units.rem(10);
+
+	background-color: transparent;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
+.card--project .card__footer {
+	row-gap: units.rem(16);
+	
+	padding: units.rem(16);
+
+	background-color: #f0f0f0;
+}

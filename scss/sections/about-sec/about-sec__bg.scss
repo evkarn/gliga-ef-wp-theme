@@ -1,0 +1,30 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.about-sec__bg {
+	position: relative;
+	z-index: -1;
+
+	width: 100%;
+
+	margin-top: units.rem(-170);
+
+	@media (max-width: units.rem(992)) {
+		margin-top: units.rem(-170);
+	}
+
+	@media ( max-width: units.em(768) ) {
+		margin-top: units.rem(-100);
+	}
+
+	@media (max-width: units.em(576)) {
+		margin-top: unset;
+		order: -1;
+	}
+}
+
+.main--about .about-sec__bg {
+	display: none;
+}

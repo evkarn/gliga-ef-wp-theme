@@ -1,0 +1,8 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.article__main {
+	padding: units.rem(6);
+}

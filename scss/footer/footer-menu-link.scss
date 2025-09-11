@@ -1,0 +1,8 @@
+@use '../variables/general';
+@use '../variables/grid';
+@use '../mixins/units';
+@use '../mixins/adaptive-value';
+
+.footer .menu-link {
+	font-size: units.rem(16);
+}

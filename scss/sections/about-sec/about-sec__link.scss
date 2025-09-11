@@ -1,0 +1,12 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.about-sec__link {
+	align-self: center;
+}
+
+.main--about .about-sec__link {
+	display: none;
+}

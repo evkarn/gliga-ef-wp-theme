@@ -1,0 +1,23 @@
+@use "../variables/general";
+@use "../variables/grid";
+@use "../mixins/units";
+
+.body {
+	position: relative;
+
+	min-width: units.rem(grid.$min-screen);
+
+	margin: 0;
+
+	font-family: var(--font-two);
+	font-style: normal;
+	font-size: units.rem(general.$fz);
+	font-weight: 500;
+	line-height: 1.5;
+
+	background-color: var(--body-bg);
+
+	color: var(--text-dark);
+
+	overflow-x: hidden;
+}

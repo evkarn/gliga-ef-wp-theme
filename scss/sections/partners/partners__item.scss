@@ -1,0 +1,43 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.partners__item {
+	position: relative;
+
+	grid-column: span 3;
+	overflow: visible;
+
+	text-align: center;
+
+	filter: grayscale(100%);
+
+	transition: filter 0.3s ease;
+
+	@media (max-width: units.rem(1024)) {
+		filter: grayscale(0%);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			filter: grayscale(0%);
+
+			.partners__descr {
+				opacity: 1;
+			}
+		}
+	}
+
+	@media (any-hover: none) {
+		filter: grayscale(0%);
+	}
+
+	&:focus-visible {
+		filter: grayscale(0%);
+
+		.partners__descr {
+			opacity: 1;
+		}
+	}
+}

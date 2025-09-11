@@ -1,0 +1,13 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.history__year {
+	font-family: var(--font-one);
+	font-weight: 700;
+	font-size: units.rem(18);
+
+	color: var(--accent);
+	white-space: nowrap;
+}

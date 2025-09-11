@@ -1,0 +1,16 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.catalog-category__product {
+	grid-column: span 3;
+
+	@media ( max-width: units.rem(1104) ) {
+		grid-column: span 4;
+	}
+
+	@media ( max-width: units.rem(896) ) {
+grid-column: span 6;
+	}
+}

@@ -1,0 +1,15 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.card__info {
+	font-weight: 300;
+	font-size: units.rem(14);
+	line-height: 1.4;
+	text-align: center;
+
+	margin-top: auto;
+
+	transition: color 0.3s ease;
+}

@@ -1,0 +1,12 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.descr-series__merits {
+	gap: units.rem(30);
+
+	@media (max-width: units.rem(832)) {
+		align-items: flex-start;
+	}
+}

@@ -1,0 +1,39 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.form-success {
+	height: 0;
+
+	margin-bottom: 0;
+	padding: 0;
+
+	letter-spacing: 0.03em;
+
+	color: var(--text-light);
+	background-color: var(--accent);
+	border-radius: units.rem(general.$border-radius);
+
+	pointer-events: none;
+	user-select: none;
+	visibility: hidden;
+
+	transition:
+		height 0.3s ease,
+		visibility 0.3s ease,
+		padding 0.3s ease,
+		margin-bottom 0.3s ease,
+		height .3s ease;
+}
+
+.form-success.is-active {
+	pointer-events: auto;
+	user-select: unset;
+	visibility: visible;
+
+	height: auto;
+
+	margin-bottom: units.rem(20);
+	padding: units.rem(16);
+}

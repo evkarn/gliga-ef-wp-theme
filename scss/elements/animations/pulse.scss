@@ -1,0 +1,50 @@
+@use '../../mixins/units';
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.pulse {
+  position: relative;
+
+  padding: units.rem(20);
+
+  width: units.rem(38);
+  height: units.rem(38);
+
+  border-radius: 50%;
+
+  text-align: center;
+}
+
+.pulse:after,
+.pulse:before {
+  content: '';
+
+  position: absolute;
+
+  inset: units.rem(-10);
+
+  border: units.rem(2) solid var(--amnesia-blue);
+  border-radius: 50%;
+
+  opacity: 0;
+
+  animation: pulse 2.5s linear infinite;
+}
+
+.pulse:after {
+  animation-delay: 1.25s;
+}

@@ -1,0 +1,15 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.card-list-wrap {
+	gap: 2rem;
+}
+
+.card-list-wrap.grid {
+	@media (max-width: units.rem(688)) {
+		display: flex;
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,8 @@
+@use '../variables/general';
+@use '../variables/grid';
+@use '../mixins/units';
+@use '../mixins/adaptive-value';
+
+.footer__container {
+	row-gap: units.rem(24);
+}

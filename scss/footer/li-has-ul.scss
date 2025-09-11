@@ -1,0 +1,16 @@
+@use "../variables/general";
+@use "../variables/grid";
+@use "../mixins/units";
+@use "../mixins/adaptive-value";
+
+.footer__nav li:has(ul) {
+	display: inline-flex;
+	align-items: center;
+	gap: units.rem(10);
+
+	@media ( max-width: units.rem(576) ) {
+		flex-direction: column;
+		align-items: flex-start;
+		row-gap: units.rem(16);
+	}
+}

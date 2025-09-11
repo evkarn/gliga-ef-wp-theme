@@ -1,0 +1,24 @@
+@use "../../../variables/general";
+@use "../../../variables/grid";
+@use "../../../mixins/units";
+@use "../../../mixins/adaptive-value";
+
+.properties .table__models {
+	flex-grow: 1;
+	max-width: calc(100% - var(--first-column-width));
+
+	.simplebar-content {
+		display: flex;
+	}
+
+	.simplebar-scrollbar {
+		background-color: #afafaf;
+		opacity: 1;
+
+		border-radius: units.rem(general.$border-radius);
+	}
+}
+
+.properties .table__models:has(.simplebar-horizontal[style="visibility: visible;"]) {
+	padding-bottom: units.rem(30);
+}

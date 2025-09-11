@@ -1,0 +1,26 @@
+@use '../units';
+@use '../../variables/general';
+
+@mixin state-buttons {
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--accent-dark);
+
+			cursor: pointer;
+		}
+	}
+
+	&:focus-visible {
+		outline-width: units.rem(general.$outline-width);
+		outline-style: dashed;
+		outline-color: currentColor;
+		outline-offset: units.rem(general.$outline-offset);
+	}
+
+	&:active {
+		background-color: var(--accent-darken);
+		outline: none;
+	}
+
+	@content;
+}

@@ -1,0 +1,8 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/fluid-size';
+
+.about-sec__banner {
+	border-radius: units.rem(general.$border-radius);
+}

@@ -1,0 +1,24 @@
+@use "./footer";
+@use "./footer__container";
+@use "./footer__row";
+@use "./footer__block";
+@use "./footer__logo";
+@use "./footer__nav";
+@use "./footer__contacts";
+@use "./footer__company-name";
+
+@use "./footer-menu-link";
+
+@use "./li-has-ul";
+@use "./footer-submenu";
+@use "./li";
+
+@use "./footer-contacts__row";
+
+@use "./footer-socials__link";
+
+@use "./footer-ru-tube";
+@use "./footer-ru-tube__header";
+@use "./footer-ru-tube__footer";
+
+@use "./spoilers/index-spoilers";

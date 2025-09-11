@@ -1,0 +1,44 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.badge {
+	position: absolute;
+	top: units.rem(15);
+	right: units.rem(15);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-width: units.rem(60);
+	min-height: units.rem(30);
+
+	padding: units.rem(3) units.rem(8);
+
+	font-size: units.rem(14);
+	line-height: 150%;
+	text-align: center;
+
+	border-radius: units.rem(8);
+
+	transition:
+		border-color .3s ease,
+		background-color 0.3s ease,
+		color 0.3s ease;
+}
+
+.badge--fill {
+	background-color: var(--accent);
+	color: var(--text-dark);
+}
+
+.badge--stroke {
+	background-color: transparent;
+	border: units.rem(1) solid var(--accent);
+}
+
+.badges .badge {
+	position: static;
+}

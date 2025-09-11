@@ -1,0 +1,13 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.contacts-sec__row {
+	align-items: flex-start;
+
+	font-weight: 500;
+	font-size: units.rem(18);
+	line-height: 133%;
+	color: #222;
+}

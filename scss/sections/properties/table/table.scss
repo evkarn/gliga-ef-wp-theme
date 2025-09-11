@@ -1,0 +1,28 @@
+@use "../../../variables/general";
+@use "../../../variables/grid";
+@use "../../../mixins/units";
+@use "../../../mixins/adaptive-value";
+
+.properties .table {
+	--first-column-width: 25rem;
+	display: flex;
+
+	font-family: var(--font-one);
+	font-weight: 400;
+
+	@media (max-width: units.rem(768)) {
+		--first-column-width: 19rem;
+	}
+
+	@media (max-width: units.rem(576)) {
+		--first-column-width: 14rem;
+	}
+
+	@media (max-width: units.rem(448)) {
+		--first-column-width: 12rem;
+	}
+
+	@media (max-width: units.rem(352)) {
+		--first-column-width: 10rem;
+	}
+}

@@ -1,0 +1,20 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.get-offer__body {
+	max-width: units.rem(1000);
+
+	margin: 0 auto;
+
+	padding: units.rem(32);
+
+	background-color: #fff;
+	border-radius: units.rem(general.$border-radius);
+	box-shadow: 0 0 units.rem(15) rgb(0 0 0 / 20%);
+
+	@media ( max-width: units.rem(576) ) {
+		padding: units.rem(20);
+	}
+}

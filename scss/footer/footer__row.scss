@@ -1,0 +1,40 @@
+@use "../variables/general";
+@use "../variables/grid";
+@use "../mixins/units";
+@use "../mixins/adaptive-value";
+
+.footer__row.grid {
+	grid-template-columns: auto auto auto auto;
+	gap: units.rem(32);
+
+	@media ( max-width: units.rem(992) ) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media (max-width: units.rem(768)) {
+		grid-template-columns: repeat(8, 1fr);
+	}
+
+	@media (max-width: units.rem(576)) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.footer__row--bottom {
+	justify-content: space-between;
+	gap: units.rem(16);
+	flex-wrap: wrap;
+
+	font-weight: 400;
+
+	padding-top: units.rem(24);
+
+	border-top: units.rem(1) solid var(--footer-bottom-line);
+
+	color: var(--footer-bottom-color);
+
+	@media (max-width: units.rem(576)) {
+		align-items: flex-start;
+	}
+}

@@ -1,0 +1,18 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.card-list {
+	grid-column: span 6;
+	
+	width: 100%;
+
+	row-gap: units.rem(25);
+
+	@include adaptive-value.adaptive-value-rem(padding, 20, 32);
+
+	border-radius: units.rem(general.$border-radius);
+
+	background-color: var(--cascading-white);
+}

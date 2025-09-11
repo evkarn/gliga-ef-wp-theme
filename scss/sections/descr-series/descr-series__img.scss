@@ -1,0 +1,14 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.descr-series__img {
+	@media (max-width: units.rem(832)) {
+		max-width: units.rem(280);
+	}
+
+	@media (max-width: units.rem(768)) {
+		display: none;
+	}
+}

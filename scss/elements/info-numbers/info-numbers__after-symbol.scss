@@ -1,0 +1,9 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.info-numbers__after-symbol {
+	@include adaptive-value.adaptive-value-rem(font-size, 20, 40);
+	color: var(--black-space);
+}

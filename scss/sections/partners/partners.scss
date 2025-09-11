@@ -1,0 +1,14 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.partners {
+	z-index: 1;
+	padding-top: 0;
+	padding-bottom: units.rem(45);
+}
+
+.main--single-post .partners {
+	padding-top: units.rem(45);
+}

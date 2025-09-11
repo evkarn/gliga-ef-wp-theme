@@ -1,0 +1,7 @@
+.descr-series .card-list__item.flex {
+	align-items: center;
+
+	&:before {
+		position: static;
+	}
+}

@@ -1,0 +1,51 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.partners__logo {
+	position: relative;
+	z-index: 2;
+	margin: 0 auto;
+
+	object-fit: contain;
+
+	max-height: units.rem(45);
+	width: auto;
+
+	@media (any-hover: none) {
+		z-index: 1;
+
+		position: absolute;
+		top: units.rem(14);
+		left: 50%;
+
+		width: calc(100% - units.rem(20));
+
+		transform: translate3d(-50%, 0, 0);
+	}
+
+	@media (max-width: units.rem(1024)) {
+		z-index: 1;
+
+		position: absolute;
+		top: units.rem(14);
+		left: 50%;
+
+		width: calc(100% - units.rem(20));
+
+		transform: translate3d(-50%, 0, 0);
+	}
+
+	@media (any-hover: none) {
+		z-index: 1;
+
+		position: absolute;
+		top: units.rem(14);
+		left: 50%;
+
+		width: calc(100% - units.rem(20));
+
+		transform: translate3d(-50%, 0, 0);
+	}
+}

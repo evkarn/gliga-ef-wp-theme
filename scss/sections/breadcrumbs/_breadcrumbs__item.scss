@@ -1,0 +1,14 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.breadcrumbs__item {
+	display: inline-block;
+}
+
+.breadcrumbs__item[data-item-active] {
+	color: var(--black-space);
+
+	pointer-events: none;
+}

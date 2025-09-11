@@ -1,0 +1,36 @@
+@use '../variables/general';
+@use '../variables/grid';
+@use '../mixins/units';
+@use '../mixins/adaptive-value';
+
+.icon-bg-80 {
+	min-height: units.rem(80);
+
+	background-position: left center;
+	background-size: units.rem(80) units.rem(80);
+	background-repeat: no-repeat;
+}
+
+.icon-bg-50 {
+	min-height: units.rem(50);
+
+	background-position: left center;
+	background-size: units.rem(50) units.rem(50);
+	background-repeat: no-repeat;
+}
+
+.icon-bg-40 {
+	min-height: units.rem(40);
+
+	background-position: left center;
+	background-size: units.rem(40) units.rem(40);
+	background-repeat: no-repeat;
+}
+
+.icon-bg-24 {
+	min-height: units.rem(24);
+
+	background-position: left center;
+	background-size: units.rem(24) units.rem(24);
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,27 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.partners__main {
+	max-width: units.rem(1000);
+	margin: 0 auto;
+
+	@media (max-width: units.rem(1024)) {
+		margin: units.rem(-5);
+		margin-left: auto;
+		margin-right: auto;
+		padding: units.rem(5);
+		padding-bottom: units.rem(16);
+		overflow-x: auto;
+	}
+
+	@media (any-hover: none) {
+		margin: units.rem(-5);
+		margin-left: auto;
+		margin-right: auto;
+		padding: units.rem(5);
+		padding-bottom: units.rem(16);
+		overflow-x: auto;
+	}
+}

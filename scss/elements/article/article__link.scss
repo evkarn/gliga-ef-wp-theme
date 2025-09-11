@@ -1,0 +1,36 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.article__link {
+	@media (any-hover: hover) {
+		&:hover {
+			.article__img-wrap:before {
+				opacity: 1;
+			}
+
+			.article__img-wrap:after {
+				inset: units.rem(10);
+			}
+
+			.article__title {
+				color: var(--accent);
+			}
+		}
+	}
+
+	&:focus-visible {
+		.article__img-wrap:before {
+			opacity: 1;
+		}
+
+		.article__img-wrap:after {
+			inset: units.rem(10);
+		}
+
+		.article__title {
+			color: var(--accent);
+		}
+	}
+}

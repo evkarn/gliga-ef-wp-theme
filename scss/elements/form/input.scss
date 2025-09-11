@@ -1,0 +1,21 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+input {
+	width: 100%;
+	height: units.rem(52);
+
+	padding: units.rem(15);
+
+	@include adaptive-value.adaptive-value-rem(font-size, 16, 20);
+	line-height: 100%;
+
+	border: none;
+	border-bottom: units.rem(1) solid var(--text-dark);
+
+	&::placeholder {
+		color: var(--amethyst-haze);
+	}
+}

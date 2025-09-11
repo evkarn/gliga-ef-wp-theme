@@ -1,0 +1,17 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.progress-line {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 11;
+
+	width: 100%;
+	height: units.rem(4);
+
+	background: transparent;
+	background-color: transparent;
+}

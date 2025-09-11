@@ -1,0 +1,24 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.models-table__column {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(6, 1fr);
+
+	&:first-child {
+		border-top-left-radius: units.rem(general.$border-radius);
+		border-bottom-left-radius: units.rem(general.$border-radius);
+	}
+
+	&:last-child {
+		border-top-right-radius: units.rem(general.$border-radius);
+		border-bottom-right-radius: units.rem(general.$border-radius);
+	}
+}
+
+.models-table--bg-fill .models-table__column {
+	grid-template-rows: repeat(7, 1fr);
+}

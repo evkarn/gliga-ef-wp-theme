@@ -1,0 +1,8 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.properties .simplebar-scrollbar:before {
+	background: var(--smoke-screen);
+}

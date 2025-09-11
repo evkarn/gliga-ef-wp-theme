@@ -1,0 +1,29 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.our-vision__list {
+	--num-elements: 5;
+	--gap: 3.125rem;
+
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: units.rem(50);
+
+	@media ( max-width: units.rem(1408) ) {
+		--num-elements: 3;
+		justify-content: center;
+	}
+
+	@media ( max-width: units.em(864) ) {
+		--num-elements: 2;
+		--gap: 2rem;
+
+		gap: units.rem(32);
+	}
+
+	@media ( max-width: units.em(480) ) {
+		--num-elements: 1;
+	}
+}

@@ -1,0 +1,13 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.intro-page__info {
+	display: inline-block;
+
+	margin-bottom: units.rem(32);
+
+	@include adaptive-value.adaptive-value-rem(font-size, 18, 24);
+	line-height: 100%;
+}

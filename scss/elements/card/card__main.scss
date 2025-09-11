@@ -1,0 +1,18 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.card__main {
+	gap: units.rem(15);
+	flex-grow: 1;
+
+	padding: units.rem(15);
+
+	border-bottom-left-radius: units.rem(general.$border-radius);
+	border-bottom-right-radius: units.rem(general.$border-radius);
+
+	background-color: var(--brand-color);
+
+	transition: background-color 0.3s ease;
+}

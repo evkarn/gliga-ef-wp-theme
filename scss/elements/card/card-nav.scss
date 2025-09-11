@@ -1,0 +1,12 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.card-nav {
+	text-align: center;
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		text-align: right;
+	}
+}

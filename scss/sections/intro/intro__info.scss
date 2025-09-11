@@ -1,0 +1,18 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.intro__info {
+	position: relative;
+	z-index: 1;
+
+	@include adaptive-value.adaptive-value-rem(row-gap, grid.$gap, 45);
+
+	padding-top: units.rem(50);
+	padding-bottom: units.rem(50);
+
+	justify-content: center;
+
+	height: 100%;
+}

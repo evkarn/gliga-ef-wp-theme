@@ -1,0 +1,33 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.intro-page {
+	padding: 0;
+
+	@media ( max-width: units.rem(704) ) {
+		padding-top: units.rem(50);
+		padding-bottom: units.rem(50);
+	}
+
+	&:before {
+		content: '';
+
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+
+		display: block;
+		width: 100%;
+		@include adaptive-value.adaptive-value-rem(height, 300, 500);
+		background: radial-gradient(circle at 67% 76%, #C4BEAB, #EDECE6);
+
+		@media ( max-width: units.rem(704) ) {
+			inset: 0;
+
+			height: 100%;
+		}
+	}
+}

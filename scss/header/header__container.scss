@@ -1,0 +1,13 @@
+@use '../variables/general';
+@use '../variables/grid';
+@use '../mixins/units';
+@use '../mixins/adaptive-value';
+
+.header__container {
+	justify-content: space-between;
+	column-gap: units.rem(grid.$gap);
+
+	@media ( max-width: units.rem(1200) ) {
+		column-gap: units.rem(16);
+	}
+}

@@ -1,0 +1,8 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.form .just-validate-error-label {
+	padding-top: units.rem(4);
+}

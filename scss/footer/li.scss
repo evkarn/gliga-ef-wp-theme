@@ -1,0 +1,20 @@
+@use "../variables/general";
+@use "../variables/grid";
+@use "../mixins/units";
+@use "../mixins/adaptive-value";
+
+.footer__nav .menu {
+	> li {
+		white-space: nowrap;
+
+		@media ( max-width: units.rem(576) ) {
+			white-space: normal;
+		}
+	}
+
+	li {
+		position: relative;
+
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,23 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.card__img {
+	position: relative;
+	z-index: 1;
+
+	width: 100%;
+	object-fit: cover;
+
+	border-top-left-radius: units.rem(general.$border-radius);
+	border-top-right-radius: units.rem(general.$border-radius);
+
+	transition: scale 0.4s ease;
+	will-change: scale;
+}
+
+.card--hover-accent .card__img {
+	max-width: units.rem(265);
+	border-radius: units.rem(general.$border-radius);
+}

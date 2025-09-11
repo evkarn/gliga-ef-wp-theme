@@ -1,0 +1,11 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.models-table__img {
+	aspect-ratio: 10 / 11.33;
+
+	transition: scale .3s ease;
+	will-change: scale;
+}

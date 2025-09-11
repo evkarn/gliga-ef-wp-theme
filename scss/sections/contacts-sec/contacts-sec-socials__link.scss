@@ -1,0 +1,9 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.contacts-sec .socials__link {
+	width: units.rem(32);
+	height: units.rem(32);
+}

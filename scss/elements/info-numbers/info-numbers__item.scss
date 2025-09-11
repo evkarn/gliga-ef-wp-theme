@@ -1,0 +1,18 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.info-numbers__item {
+	row-gap: units.rem(4);
+
+	padding: units.rem(12) units.rem(16);
+
+	text-align: center;
+
+	border: units.rem(1) solid var(--snowflake);
+	border-radius: units.rem(general.$border-radius);
+	background-color: oklch(1 0 0 / 70%);
+
+	box-shadow: 0 units.rem(3) units.rem(12) rgb(0 0 0 / 25%);
+}

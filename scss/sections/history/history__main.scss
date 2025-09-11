@@ -1,0 +1,22 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.history__main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	padding: units.rem(20);
+
+	border-radius: units.rem(general.$border-radius);
+	background-color: var(--billiard-table);
+
+	color: var(--text-light);
+
+	@media (max-width: units.rem(736)) {
+		display: flex;
+		flex-direction: column;
+		row-gap: units.rem(14);
+	}
+}

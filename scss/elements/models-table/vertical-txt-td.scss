@@ -1,0 +1,22 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.models-table__td.vertical-txt-td {
+	span {
+		display: block;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		transform: rotate(180deg);
+	}
+}
+
+.models-table--bg-fill .models-table__td.vertical-txt-td {
+	background-color: var(--secondary);
+	color: var(--text-light);
+
+	&:nth-child(2) {
+		border-bottom-color: var(--text-light);
+	}
+}

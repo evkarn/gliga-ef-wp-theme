@@ -1,0 +1,17 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/fluid-size';
+
+.error-404 {
+	padding-top: calc(var(--header-height) + 2rem);
+	padding-bottom: units.rem(32);
+}
+
+.error-404__container {
+	row-gap: units.rem(32);
+}
+
+.page-content {
+	row-gap: units.rem(32);
+}

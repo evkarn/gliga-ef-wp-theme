@@ -1,0 +1,9 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.contacts-sec__txt {
+	font-weight: 400;
+	font-size: units.rem(20);
+}

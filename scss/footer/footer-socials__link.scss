@@ -1,0 +1,9 @@
+@use "../variables/general";
+@use "../variables/grid";
+@use "../mixins/units";
+@use "../mixins/adaptive-value";
+
+.footer .socials__link {
+	width: units.rem(40);
+	height: units.rem(40);
+}

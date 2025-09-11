@@ -1,0 +1,58 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.article__link .article__img-wrap {
+	position: relative;
+	overflow: hidden;
+
+	&:before,
+	&:after {
+		content: "";
+
+		position: absolute;
+		z-index: 1;
+
+		display: block;
+
+		object-fit: cover;
+
+		pointer-events: none;
+
+		border-radius: units.rem(general.$border-radius);
+	}
+
+	&:before {
+		content: "Подробнее";
+		inset: 0;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 100%;
+		height: 100%;
+
+		background-color: rgb(21 70 122 / 70%);
+		color: var(--text-light);
+
+		opacity: 0;
+
+		transition: opacity 0.3s ease;
+		will-change: opacity;
+	}
+
+	&:after {
+		position: absolute;
+		inset: units.rem(-10);
+
+		display: block;
+
+		object-fit: cover;
+
+		border: units.rem(1) solid var(--accent-light);
+
+		transition: inset 0.3s ease;
+	}
+}

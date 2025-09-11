@@ -1,0 +1,19 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.intro {
+	height: 100dvh;
+
+	padding-top: var(--header-height);
+	padding-bottom: 0;
+
+	color: var(--light);
+
+	transition: height 0.3s ease;
+
+	@media (max-height: units.rem(540)) {
+		height: auto;
+	}
+}

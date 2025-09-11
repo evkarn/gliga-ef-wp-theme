@@ -1,0 +1,22 @@
+@use "../variables/general";
+@use "../variables/grid";
+@use "../mixins/units";
+@use "../mixins/adaptive-value";
+
+.header .logo {
+	flex-shrink: 0;
+	margin: units.rem(10) 0;
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		z-index: 5;
+	}
+}
+
+.logo__img {
+	@include adaptive-value.adaptive-value-rem(max-width, 90, 140);
+	max-height: units.rem(60);
+
+	@media (max-width: units.rem(1200)) {
+		max-width: units.rem(100);
+	}
+}

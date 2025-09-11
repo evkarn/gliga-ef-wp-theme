@@ -1,0 +1,35 @@
+@use "../variables/general";
+@use "../variables/grid";
+@use "../mixins/units";
+@use "../mixins/adaptive-value";
+
+.footer__nav {
+	display: flex;
+	column-gap: units.rem(grid.$gap);
+	row-gap: units.rem(16);
+
+	@media (max-width: units.rem(576)) {
+		flex-direction: column;
+	}
+
+	a {
+		transition: color 0.3s ease;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--accent);
+			}
+		}
+
+		&:focus-visible {
+			outline-width: units.rem(general.$outline-width);
+			outline-style: dashed;
+			outline-color: var(--accent);
+			outline-offset: units.rem(general.$outline-offset);
+		}
+
+		&:active {
+			color: var(--accent-light);
+		}
+	}
+}

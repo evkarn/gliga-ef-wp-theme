@@ -1,0 +1,19 @@
+.card__descr {
+	font-family: var(--font-two);
+
+	color: var(--black-space);
+	line-height: 1.5;
+}
+
+.card--news .card__descr {
+	font-weight: 400;
+	text-align: left;
+}
+
+.card--info .card__descr {
+	font-weight: 400;
+}
+
+.card--hover-accent .card__descr {
+	color: inherit;
+}

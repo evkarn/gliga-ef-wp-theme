@@ -1,0 +1,17 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.intro-page__model {
+	display: inline-block;
+
+	@include adaptive-value.adaptive-value-rem(margin-bottom, 32, 48);
+
+	font-family: var(--font-one);
+	font-weight: 700;
+	@include adaptive-value.adaptive-value-rem(font-size, 50, 135);
+	line-height: 120%;
+
+	color: var(--billiard-table);
+}

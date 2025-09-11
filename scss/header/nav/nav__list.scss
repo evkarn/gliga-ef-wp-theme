@@ -1,0 +1,15 @@
+@use '../../variables/general';
+@use '../../variables/grid';
+@use '../../mixins/units';
+@use '../../mixins/adaptive-value';
+
+.header__nav .nav__list {
+	flex-wrap: wrap;
+	column-gap: units.rem(grid.$gap);
+	row-gap: units.rem(4);
+
+	@media (max-width: units.rem(grid.$max-switch-point)) {
+		flex-direction: column;
+		row-gap: units.rem(grid.$gap);
+	}
+}

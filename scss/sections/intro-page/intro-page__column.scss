@@ -1,0 +1,16 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.intro-page__column {
+	grid-column: span 6;
+
+	&:last-child {
+		@media ( max-width: units.rem(704) ) {
+			display: flex;
+			justify-content: flex-start;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.cf-container__tabs-item--current button {
+	background: lightgoldenrodyellow !important;
+}
+
+.cf-complex__tabs-item--current {
+	background-color: lightgoldenrodyellow !important;
+}
+
+.postbox-header {
+	background-color: #dee9f9;
+}
+
+.edit-post-meta-boxes-area .postbox-header {
+	border-bottom: 1px solid;
+	border-top: 1px solid #ddd;
+}

@@ -1,0 +1,12 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.case-details__item {
+	grid-column: span 3;
+
+	@media ( max-width: units.rem(992) ) {
+		grid-column: span 6;
+	}
+}

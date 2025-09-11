@@ -1,0 +1,18 @@
+@use "../../variables/general";
+@use "../../variables/grid";
+@use "../../mixins/units";
+@use "../../mixins/adaptive-value";
+
+.card__title {
+	font-family: var(--font-one);
+	font-weight: 700;
+	@include adaptive-value.adaptive-value-rem(font-size, 22, 35);
+	text-align: center;
+	color: var(--card-title-color);
+
+	transition: color 0.3s ease;
+}
+
+.catalog-category--categories .card__title {
+	font-size: units.rem(18);
+}

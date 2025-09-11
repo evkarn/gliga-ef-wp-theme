@@ -1,0 +1,38 @@
+@use '../variables/grid';
+@use '../mixins/units';
+
+.container {
+	max-width: units.rem(grid.$container-width);
+	width: 100%;
+
+	margin: 0 auto;
+	padding: 0 units.rem(grid.$container-offset);
+}
+
+.container-fluid {
+	max-width: 100%;
+	width: 100%;
+
+	margin: 0 auto;
+	padding: 0;
+}
+
+.container-right {
+	max-width: 100%;
+	width: 100%;
+	padding-left: calc((100% - #{units.rem(grid.$container-width)}) / 2);
+
+	@media (max-width: #{units.rem(grid.$container-width)}) {
+		padding-left: units.rem(grid.$container-offset);
+	}
+}
+
+.container-left {
+	max-width: 100%;
+	width: 100%;
+	padding-right: calc((100% - #{units.rem(grid.$container-width)}) / 2);
+
+	@media (max-width: #{units.rem(grid.$container-width)}) {
+		padding-right: units.rem(grid.$container-offset);
+	}
+}
