@@ -6,6 +6,10 @@
 .about-sec .info-numbers {
 	@include adaptive-value.adaptive-value-rem(gap, 15, 32);
 
+	max-width: units.rem(1000);
+	width: 100%;
+	margin: 0 auto;
+
 	@media (max-width: units.em(384)) {
 		display: flex;
 		flex-direction: column;

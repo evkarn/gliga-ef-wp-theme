@@ -17,7 +17,15 @@
 				<li class="case-details__item">
 					<article class="case-details__article article article--detail flex-column-center">
 						<header class="article__img-wrap">
-							<?php if ( $item['img'] ) { echo wp_get_attachment_image( $item['img'], 'full', false, array( 'class' => 'article__img' ) ); } ?>
+							<img
+								class="article__img case-details__img"
+								src="<?php if ( $item['img'] ) { echo wp_get_attachment_image_url( $item['img'], 'full' ); } ?>"
+								width="340"
+								height="212"
+								alt="<?php if ( $item['img'] ) { $alt_text = get_post_meta( $item['img'], '_wp_attachment_image_alt', true ); echo $alt_text ? esc_attr( $alt_text ) : 'Описание изображения'; } else { echo 'Описание изображения'; } ?>"
+								loading="lazy"
+								decoding="auto"
+							>
 						</header>
 
 						<div class="article__main">

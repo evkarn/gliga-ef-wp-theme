@@ -90,33 +90,6 @@ function crb_attach_theme_options() {
 				)),
     ))
 
-    ->add_tab( __( 'История развития' ), array(
-			Field::make( 'text', 'crb_history_title', __( 'Заголовок секции' ) )
-				->set_default_value( 'История развития' ),
-
-			Field::make( 'complex', 'crb_history_left_list', __( 'Исторические вехи' ) )
-				->set_layout( 'tabbed-horizontal' )
-				->setup_labels( array(
-					'plural_name'   => 'Элементы',
-					'singular_name' => 'Элемент',
-				))
-				->add_fields( array(
-					Field::make( 'text', 'year', __( 'год' ) ),
-					Field::make( 'text', 'text', __( 'Текст' ) ),
-				)),
-
-			Field::make( 'complex', 'crb_history_right_list', __( 'Исторические вехи' ) )
-				->set_layout( 'tabbed-horizontal' )
-				->setup_labels( array(
-					'plural_name'   => 'Элементы',
-					'singular_name' => 'Элемент',
-				))
-				->add_fields( array(
-					Field::make( 'text', 'year', __( 'год' ) ),
-					Field::make( 'text', 'text', __( 'Текст' ) ),
-				)),
-    ))
-
 		->add_tab( __( 'Награды и достижения' ), array(
 			Field::make('text', 'crb_awards_title', 'Заголовок')
 				->set_default_value( 'Награды и&nbsp;достижения' ),

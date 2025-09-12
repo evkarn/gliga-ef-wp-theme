@@ -8,9 +8,7 @@ get_header();
 		<main id="primary" class="main main--about">
 			<?php get_template_part('template-sections/breadcrumbs'); ?>
 
-			<?php get_template_part('template-sections/about-sec-without-btn'); ?>
-
-			<?php get_template_part('template-sections/history'); ?>
+			<?php get_template_part('template-sections/about-sec'); ?>
 
 			<?php get_template_part('template-sections/awards'); ?>
 

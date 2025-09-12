@@ -1,7 +1,7 @@
 <?php
 	$current_page_id = intval(get_queried_object_id());
 
-	$term_name = get_term_field('name', $current_page_id, 'press_type');
+	$term_name = get_term_field('name', $current_page_id, 'equipment_type');
 ?>
 <section class="section breadcrumbs">
 	<div class="container">

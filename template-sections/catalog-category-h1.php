@@ -95,7 +95,7 @@
 			</li>
 			<?php endwhile; wp_reset_postdata(); ?>
 		</ul>
-		<?php else : echo '<li>Оборудование не найдено</li>'; ?>
+		<?php else : echo '<div>Оборудование не найдено</div>'; ?>
 		<?php endif;?>
 	</div>
 </section>

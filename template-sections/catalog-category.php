@@ -82,7 +82,7 @@ $presses_query = new WP_Query($args);
 				</article>
 			</li>
 			<?php endwhile; wp_reset_postdata(); ?>
-			<?php else : echo '<li>Оборудование не найдено</li>'; ?>
+			<?php else : echo '<div>Оборудование не найдено</div>'; ?>
 		</ul>
 		<?php endif; ?>
 	</div>

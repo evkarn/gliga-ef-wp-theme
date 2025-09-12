@@ -7,7 +7,14 @@
 	gap: units.rem(8);
 	line-height: 1.2;
 
-	transition: color .3s ease;
+	transition: color .3s ease, background-color .3s ease;
+
+	&:focus-visible {
+		outline-width: units.rem(general.$outline-width);
+		outline-style: dashed;
+		outline-color: var(--accent);
+		outline-offset: units.rem(general.$outline-offset);
+	}
 }
 
 .footer .link-catalog {
@@ -16,11 +23,51 @@
 			color: var(--accent);
 		}
 	}
+}
+
+.intro-page .link-catalog {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: units.rem(10);
+
+	padding: units.rem(16) units.rem(24);
+
+	font-family: var(--font-one);
+	font-weight: 700;
+	text-align: center;
+
+	@include adaptive-value.adaptive-value-rem(font-size, 16, 20);
+
+	background-color: var(--black-space);
+
+	border: none;
+	border-radius: units.rem(general.$border-radius);
+
+	color: var(--text-light);
+
+	white-space: nowrap;
+
+	cursor: pointer;
+
+	transition: background-color 0.3s ease, color .3s ease, scale .3s ease;
+	will-change: scale;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--accent);
+			color: var(--text-light);
+		}
+	}
 
 	&:focus-visible {
 		outline-width: units.rem(general.$outline-width);
 		outline-style: dashed;
 		outline-color: var(--accent);
 		outline-offset: units.rem(general.$outline-offset);
+	}
+
+	&:active {
+		scale: .95;
 	}
 }
