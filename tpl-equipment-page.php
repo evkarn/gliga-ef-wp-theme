@@ -6,7 +6,7 @@
 get_header();
 ?>
 		<main id="primary" class="main main--product-page">
-			<?php get_template_part('template-sections/breadcrumbs'); ?>
+			<?php get_template_part('template-sections/breadcrumbs-terms'); ?>
 
 			<?php get_template_part('template-sections/intro-page'); ?>
 

@@ -13,3 +13,17 @@ add_filter('wp_kses_allowed_html', function($tags) {
 	}
 	return $tags;
 });
+
+function remove_script_type_attribute($tag, $handle) {
+	// Убираем type="text/javascript" и type='text/javascript'
+	$tag = preg_replace("/type=['\"]text\/javascript['\"]/", '', $tag);
+
+	// Убираем type="script" и type='script'
+	$tag = preg_replace("/type=['\"]script['\"]/", '', $tag);
+
+	// Убираем type="module" и type='module' (если нужно)
+	// $tag = preg_replace("/type=['\"]module['\"]/", '', $tag);
+
+	return $tag;
+}
+add_filter('script_loader_tag', 'remove_script_type_attribute', 10, 2);

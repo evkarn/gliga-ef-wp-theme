@@ -4,6 +4,7 @@
  */
 function main_scripts() {
 	wp_enqueue_style( 'main-style', get_stylesheet_uri(), array(), _S_VERSION );
+	
 	wp_style_add_data( 'main-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'main-navigation', get_template_directory_uri() . '/js/navigation.min.js', array(), _S_VERSION, true );
