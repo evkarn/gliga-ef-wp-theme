@@ -84,4 +84,4 @@ require get_template_directory() . '/inc/functions/get-current-canonical-url.php
 require get_template_directory() . '/inc/functions/output-recent-posts.php';
 
 // Показывает название шаблона страницы в правом нижнем углу
-// require get_template_directory() . '/inc/functions/show-template.php';
+require get_template_directory() . '/inc/functions/show-template.php';

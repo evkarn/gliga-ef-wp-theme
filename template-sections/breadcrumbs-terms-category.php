@@ -59,25 +59,13 @@
 
 				<?php if ($current_term && !is_wp_error($current_term)): ?>
 				<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-					<a class="breadcrumbs__link" itemprop="item" href="<?php echo esc_url(get_term_link($current_term)); ?>">
-						<span itemprop="name">
-							<?php echo esc_html($current_term->name); ?>
-						</span>
-					</a>
-
-					<span class="divider"> • </span>
+					<span itemprop="name">
+						<?php echo esc_html($current_term->name); ?>
+					</span>
 
 					<meta itemprop="position" content="3">
 				</li>
 				<?php endif; ?>
-
-				<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" data-item-active="">
-					<span itemprop="name">
-						<?php echo esc_html(get_the_title()); ?>
-					</span>
-
-					<meta itemprop="position" content="<?php echo $current_term ? '4' : '3'; ?>">
-				</li>
 			</ol>
 		</nav>
 	</div>

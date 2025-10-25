@@ -21,6 +21,7 @@
 	@media (min-width: units.rem(grid.$min-switch-point)) {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		height: 100%;
 	}
 }

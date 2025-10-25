@@ -1,11 +1,11 @@
 <?php
 /*
-	Шаблон для таксономии 'press_type'
+	Шаблон для таксономии 'equipment-type'
 */
 get_header('term');
 ?>
 		<main id="primary" class="main">
-			<?php get_template_part('template-sections/breadcrumbs-terms'); ?>
+			<?php get_template_part('template-sections/breadcrumbs-terms-category'); ?>
 
 			<?php get_template_part('template-sections/intro-image-for-page'); ?>
 
